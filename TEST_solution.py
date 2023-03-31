@@ -13,5 +13,6 @@ while l<r and ans>0:
 		l+=1
 	else: 
 		r-=1
+print("good")
 print(p1,p2)
 
