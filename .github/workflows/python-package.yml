@@ -31,7 +31,15 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install python-telegram-bot
+        
+    - name: Install Python dependencies for hello_totolo.py
+      run: |
+          python -m pip install --upgrade pip
+          pip install playwright
 
+    - name: Install Playwright browsers
+      run: playwright install --with-deps
+        
     - name: Run the script
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  # GitHub Secrets에 저장된 봇 토큰
