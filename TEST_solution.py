@@ -11,23 +11,23 @@ BOT_TOKEN = '7505977485:AAGv24lXugrL6gb5RlisRX9NvB3Zvc-QEAs'
 CHAT_ID = '7589059359'
 bot_message = ""
 
-N = int(input())
-A = list(map(int,input().split()))
-l,r = 0,N-1
-ans = 2000000000
-p1,p2 = -1,-1
-while l<r and ans>0:
-	val = A[l]+A[r]
-	if abs(val)<ans:
-		ans = abs(val)
-		p1=l
-		p2=r
-	if val<0:
-		l+=1
-	else: 
-		r-=1
-print("good")
-print(p1,p2)
+#N = int(input())
+#A = list(map(int,input().split()))
+#l,r = 0,N-1
+#ans = 2000000000
+#p1,p2 = -1,-1
+#while l<r and ans>0:
+#	val = A[l]+A[r]
+#	if abs(val)<ans:
+#		ans = abs(val)
+#		p1=l
+#		p2=r
+#	if val<0:
+#		l+=1
+#	else: 
+#		r-=1
+#print("good")
+# print(p1,p2)
 
 async def send_bot_message_for_test():
     message = "hello telegram, I am Yongho Shin"
