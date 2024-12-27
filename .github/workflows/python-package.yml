@@ -3,7 +3,16 @@ name: Send Telegram Message
 on:
   schedule:
     - cron: '*/30 * * * *'  # UTC 기준으로 월요일 오전 1시 (KST 기준으로 월요일 오전 10시)
-
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Select job to run'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - TEST_solution
 
 jobs:
   send_message:
