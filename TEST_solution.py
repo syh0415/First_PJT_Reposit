@@ -1,3 +1,4 @@
+import os
 import sys
 from playwright.sync_api import Playwright, sync_playwright
 import telegram
@@ -7,8 +8,8 @@ import time
 sys.stdout.reconfigure(encoding='utf-8')
 
 # 봇 토큰과 채팅 ID 설정
-# BOT_TOKEN = '7505977485:AAGv24lXugrL6gb5RlisRX9NvB3Zvc-QEAs'
-# CHAT_ID = '7589059359'
+BOT_TOKEN = os.getenv('BOT_TOKEN')   #'7505977485:AAGv24lXugrL6gb5RlisRX9NvB3Zvc-QEAs'
+CHAT_ID = os.getenv('CHAT_ID')       #'7589059359'
 bot_message = ""
 
 #N = int(input())
